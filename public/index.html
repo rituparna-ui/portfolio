@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rituparna Warwatkar | Portfolio</title>
     <link rel="shortcut icon" href="/assets/favicon.ico" type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
     <link rel="stylesheet" href="/assets/styles.css" />
   </head>
   <body>
@@ -32,17 +36,101 @@
         </nav>
       </header>
       <!-- Main -->
-      <main class="flex-grow flex items-center justify-center">
-        <div>Rituparna</div>
+      <main
+        class="flex-grow flex flex-col items-center justify-center text-center"
+      >
+        <img
+          src="/assets/img/logo.png"
+          alt="Rituparna W"
+          class="img-fluid s-google"
+        />
+        <h1 class="font-medium text-4xl">
+          I'm
+          <span class="typed"></span>
+        </h1>
+        <p class="text-xl mt-2">
+          ❝ Yet another noob in this professional world ❞
+        </p>
+        <p class="text-xl font-semibold mt-2">
+          Software Development Engineer @ Amazon(AWS)
+        </p>
+        <div class="mt-4 flex flex-col items-center gap-1">
+          <div>
+            <img
+              src="/assets/img/location.png"
+              alt="location icon"
+              class="w-8"
+            />
+          </div>
+          <p class="font-semibold">Berlin, Germany</p>
+        </div>
+        <div class="mt-4 flex gap-6">
+          <a href="https://wa.me/917798516764" class="text-3xl social-icon">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+          <a
+            href="https://github.com/rituparna-ui"
+            class="text-3xl social-icon"
+          >
+            <i class="bi bi-github"></i>
+          </a>
+          <a
+            href="https://linkedin.com/in/rituparna-warwatkar"
+            class="text-3xl social-icon"
+          >
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a
+            href="https://stackoverflow.com/users/14027764/rituparna-warwatkar"
+            class="text-3xl social-icon"
+          >
+            <i class="bi bi-stack-overflow"></i>
+          </a>
+          <a
+            href="https://www.facebook.com/rituparnaw"
+            class="text-3xl social-icon"
+          >
+            <i class="bi bi-facebook"></i>
+          </a>
+          <a
+            href="https://www.instagram.com/rituparna_warwatkar"
+            class="text-3xl social-icon"
+          >
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
       </main>
       <!-- Footer -->
-      <footer class="text-center p-4 text-lg">
-        Made with Love by
+      <footer class="text-center p-4 text-xl">
+        Made with <i class="bi bi-heart-fill text-red-500"></i> by
         <a href="/" class="text-blue-600">Ritu</a>.
       </footer>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script src="/assets/particles.js"></script>
+    <script src="/assets/typed.js"></script>
+    <script>
+      const socialIcons = document.getElementsByClassName("social-icon");
+      const colorClasses = ["g-red", "g-green", "g-yellow", "g-blue"];
+
+      Array.from(socialIcons).forEach((el) => {
+        el.addEventListener("mouseenter", () => {
+          const randomColor =
+            colorClasses[Math.floor(Math.random() * colorClasses.length)];
+          el.classList.add(randomColor);
+        });
+        el.addEventListener("mouseleave", () => {
+          for (let index = 0; index < el.classList.length; index++) {
+            const element = el.classList[index];
+            if (colorClasses.includes(element)) {
+              el.classList.remove(element);
+              break;
+            }
+          }
+        });
+      });
+    </script>
   </body>
 </html>
