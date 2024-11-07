@@ -16,6 +16,20 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="/assets/styles.css" />
+    <style>
+      .scroll::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      .scroll::-webkit-scrollbar-track {
+        background: #323c46;
+      }
+
+      .scroll::-webkit-scrollbar-thumb {
+        background-color: #1e2328;
+        border-radius: 999px;
+      }
+    </style>
   </head>
   <body>
     <div id="particles" class="h-full"></div>
@@ -42,7 +56,7 @@
         </nav>
       </header>
       <!-- Main -->
-      <main class="flex-auto overflow-y-auto">
+      <main class="flex-auto overflow-y-auto scroll">
         <h1 class="text-center bg-dark-1 text-white text-5xl p-6">Projects</h1>
         <div class="bg-dark-2 p-10">
           <h2 class="text-center text-white text-3xl mb-6">
